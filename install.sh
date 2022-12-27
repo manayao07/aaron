@@ -122,7 +122,7 @@ until [[ "$opts" =~ ^[1]$ ]]; do
 
 	case $opts in
 	1)
-	until [[ "$SOCKSPORT" =~ ^[0-9]+$ ]] && [ "$SOCKSPORT" -ge 1 ] && [ "$SOCKSPORT" -le 55555 ]; do "55555" SOCKSPORT
+	until [[ "$SOCKSPORT" =~ ^[0-9]+$ ]] && [ "$SOCKSPORT" -ge 1 ] && [ "$SOCKSPORT" -le 55555 ];
 	done
 	SOCKSAUTH='none'
 	Installation
