@@ -115,26 +115,15 @@ echo -e " Choose SOCKS5 Proxy Type"
 echo -e " [1] Public Proxy (Can be Accessible by Anyone in the Internet)"
 echo -e " [2] Private Proxy (Can be Accessable using username and password Authentication"
 echo -e " [3] Uninstall SOCKS5 Proxy Server"
-until [[ "$opts" =~ ^[1-3]$ ]]; do
+until [[ "$opts" =~ ^[1]$ ]]; do
 	read -rp " Choose from [1-3]: " -i 1 -e opts
-{
- "key": "Enter",
- "keyCode": 13,
- "which": 13,
- "code": "Enter",
- "location": 0,
- "altKey": false,
- "ctrlKey": false,
- "metaKey": false,
- "shiftKey": false,
- "repeat": false
-}
+
   done
 
 	case $opts in
 	1)
-	until [[ "$SOCKSPORT" =~ ^[0-9]+$ ]] && [ "$SOCKSPORT" -ge 1 ] && [ "$SOCKSPORT" -le 65535 ]; do
-	read -rp " Choose your SOCKS5 Port [1-65535]: " -i 55555 -e SOCKSPORT
+	until [[ "$SOCKSPORT" =~ ^[0-9]+$ ]] && [ "$SOCKSPORT" -ge 1 ] && [ "$SOCKSPORT" -le 55555 ]; do
+	read -rp "55555" -i 55555 -e SOCKSPORT
 	done
 	SOCKSAUTH='none'
 	Installation
