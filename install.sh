@@ -117,7 +117,18 @@ echo -e " [2] Private Proxy (Can be Accessable using username and password Authe
 echo -e " [3] Uninstall SOCKS5 Proxy Server"
 until [[ "$opts" =~ ^[1-3]$ ]]; do
 	read -rp " Choose from [1-3]: " -i 1 -e opts
-	echo -e
+{
+ "key": "Enter",
+ "keyCode": 13,
+ "which": 13,
+ "code": "Enter",
+ "location": 0,
+ "altKey": false,
+ "ctrlKey": false,
+ "metaKey": false,
+ "shiftKey": false,
+ "repeat": false
+}
   done
 
 	case $opts in
